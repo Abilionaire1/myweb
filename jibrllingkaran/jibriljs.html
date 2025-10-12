@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>kel Lingkaran</title>
+
+  <style>
+    @import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
+
+  
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: #000000;
+      --clr: #005cbf;
+    }
+
+    .card {
+      position: relative;
+      width: 300px;
+      height: 350px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: 0.5s;
+      transition-delay: 0.5s;
+    }
+
+   
+    .card {
+      transform: scale(1);
+      transition: transform 0.6s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.5);
+    }
+
+
+    .card .circle {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+  
+    .card .circle::before {
+      content: "";
+      position: absolute;
+      top: 50;
+      left: 2;
+      right: 2;
+      width: 350px;
+      height: 350px;
+      border-radius: 50%;
+      background: #ffffff;
+      border: 8px solid var(--clr);
+     filter: drop-shadow(0 0 20px var(--clr));
+    }
+
+    .card:hover .circle::before {
+      transition-delay: 0.5s;
+      width: 100%;
+      height: 100%;
+      border: solid 3px rgb(19, 11, 170);
+      border-radius: 20px;
+      background-color: var(--clr);
+    }
+
+ 
+    .card .circle .logo {
+      position: relative;
+      width: 250px;
+      transition: 0.9s;
+      transition-delay: 0.9s;
+    }
+
+    .card:hover .circle .logo {
+      transform: scale(0);
+      transition-delay: 0s;
+    }
+
+    .card .content {
+      position: absolute;
+      width: 50%;
+      left: 20%;
+      padding: 20px;
+      opacity: 0;
+      visibility: visible;
+      transition: 0.5s;
+    }
+
+    .card:hover .content {
+      transition-delay: 0.5s;
+      opacity: 1;
+      visibility: visible;
+      left: 20px;
+    }
+
+    .card .content h2 {
+      color: #fff;
+      text-transform: uppercase;
+      font-size: 2.5em;
+      line-height: 1em;
+    }
+
+    .card .content p {
+      opacity: 0;
+      transform: translateY(10px);
+      transition: opacity 1s ease, transform 1s ease;
+    }
+
+
+    .card:hover .content p {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .card .content label {
+      color: #fff;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 8px;
+    }
+
+    .form-grid label {
+      color: #fff;
+    }
+
+    .form-grid input {
+      padding: 5px;
+      border-radius: 5px;
+      border: none;
+      background: #440f0f77;
+    }
+
+    #keliling,
+    #luas {
+      color: #fff;
+      font-weight: 500;
+      margin: 1px 0;
+    }
+
+    
+    .form-grid button {
+      padding: 8px 20px;
+      border: none;
+      border-radius: 8px;
+      background: linear-gradient(45deg, #00d4ff, #0f8fff);
+      color: #fff;
+      font-weight: 600;
+      cursor: pointer;
+      justify-self: start;
+      transition: 0.3s;
+    }
+
+    
+    .form-grid button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 12px #00d4ff;
+    }
+  </style>
+
+</head>
+
+<body>
+
+
+  <div class="card">
+    <div class="circle">
+      <img src="circlelogo.png" alt="circle Logo" class="logo">
+    </div>
+    <div class="content">
+      <h2>Hitung disini</h2>
+      <form class="form-grid" onsubmit="hitung();">
+        <label for="jariJari">Masukkan jari-jari:</label>
+        <input type="number" id="jariJari" step="any" placeholder="Contoh: 16">
+
+        <p id="keliling"></p>
+        <p id="luas"></p>
+
+        <button type="button" onclick="hitung()">Hitung</button>
+      </form>
+
+    </div>
+  </div>
+
+  <script>
+    function hitung() {
+      // const dipakai karena id jariJari tidak akan berubah (permanen)
+      const jariJari = document.getElementById('jariJari').valueAsNumber;
+
+      // cek apakah input valid (angka lebih besar dari 0)
+      if (isNaN(jariJari) || jariJari <= 0) {
+        document.getElementById('keliling').textContent = "Tidak valid!";
+        document.getElementById('luas').textContent = "";
+        
+      }
+
+      // let di pk utk hasil perhitungan karena nilainya bisa berubah
+      let keliling = 2 * Math.PI * jariJari;     // math.pi = π
+      let luas = Math.PI * Math.pow(jariJari, 2); // math.pow = r²
+
+      document.getElementById('keliling').textContent =
+        `Keliling: ${keliling.toFixed(2)}`;
+      document.getElementById('luas').textContent =
+        `Luas: ${luas.toFixed(2)}`;
+
+      
+    }
+  </script>
+
+</html> <!-- cihuuuuuuuuuuuuuuuuuuuuuuuuuuuuyyyyyyyyyyyyy -->

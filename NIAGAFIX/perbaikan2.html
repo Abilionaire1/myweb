@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kopi Singgah</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Merriweather&family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href='https://cdn-uicons.flaticon.com/3.0.0/uicons-solid-straight/css/uicons-solid-straight.css'>
+    <link rel="stylesheet" href="perbaikan2.css">
+    <script src="perbaikan2.js"></script>
+
+</head>
+<body>
+    
+    <nav class="navbar">
+        <div class="container flex justify-between items-center">
+            <div class="logo">
+                <i img src="D:\BACKUP\Baru\LEARN CODING\NIAGAFIX\fotokopi\logokopi.png"></i> Kopi Singgah
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Beranda</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#about">Tentang</a></li>
+            </ul>
+            <div class="cart-icon" onclick="toggleCart()">
+                <i class="fi fi-rr-shopping-cart-add"></i>
+                <span class="cart-count" id="cartCount">0</span>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <img src="snwycoffeebar.jpg" alt="Hero Image" class="hero-img">
+        <div class="container">
+            <h1>Selamat Datang di Kopi Singgah</h1>
+            <p>Teman singgah terbaik. Lengkapi hari-harimu dengan segelas Kopi Singgah☕</p>
+            <button class="btn cta-btn" onclick="document.getElementById('menu').scrollIntoView()">Lihat Menu</button>
+        </div>
+    </section>
+
+    <section id="menu" class="menu">
+        <div class="container">
+            <h2 class="section-title">Menu Kopi Singgah</h2>
+            
+            <div class="filter">
+                <button class="active" onclick="filterProducts('all')">Semua</button>
+                <button onclick="filterProducts('coffee')">☕ Coffee</button>
+                <button onclick="filterProducts('non-coffee')">🥤 Non Coffee</button>
+            </div>
+            
+            <div class="products" id="productsGrid">
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="menu">
+        <div class="container text-center">
+            <h2 class="section-title">Tentang Kopi Singgah</h2>
+            <p style="max-width: 670px; margin: 0 auto 30px; line-height: 1.6; color: rgb(252, 250, 250);">
+                Kopi Singgah hadir untuk memberikan pengalaman minum kopi yang tak terlupakan. 
+                Dengan biji kopi pilihan dan resep spesial, setiap cangkir adalah cerita kehangatan.
+            </p>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <h3>Kopi Singgah</h3>
+                    <p>Nikmati rasa kopi premium dengan kenikmatan tiada tara.</p>
+                </div>
+                <div>
+                    <h3>Menu Cepat</h3>
+                    <ul>
+                        <li><a href="#home">Beranda</a></li>
+                        <li><a href="#menu">Menu</a></li>
+                        <li><a href="#about">Tentang</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Hubungi Kami</h3>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> +62 857-9523-0799</li>
+                        <li><i class="fas fa-envelope"></i> info @KopiSinggah.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2098 Kopi Singgah. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+   <button class="feedback-btn" onclick="toggleFeedback()">
+   <i class="fi fi-ss-paper-plane"></i>
+</button>
+
+<div class="feedback-form" id="feedbackForm">
+  <h4>Kirimkan Feedback</h4>
+  <div class="rating" id="rating">
+    <span class="star" data-rating="1">★</span>
+    <span class="star" data-rating="2">★</span>
+    <span class="star" data-rating="3">★</span>
+    <span class="star" data-rating="4">★</span>
+    <span class="star" data-rating="5">★</span>
+  </div>
+  <textarea class="feedback-textarea" placeholder="Tulis komentar Anda..."></textarea>
+  <button class="btn" style="width: 100%; background: #8B4513; color: white;" onclick="submitFeedback()">Kirim</button>
+</div>
+
+
+    <!-- perkeranjangan-->
+    <div class="modal" id="cartModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">Keranjang Belanja</h3>
+                <button class="close" onclick="toggleCart()">&times;</button>
+            </div>
+            <div id="cartItems"></div>
+            <div class="cart-total">Total: Rp <span id="cartTotal">0</span></div>
+            <div class="cart-actions">
+                <button class="btn clear-btn" onclick="clearCart()">Kosongkan</button>
+                <button class="btn checkout-btn" onclick="checkout()">Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="notification" id="notification"></div>
+    <div id="toast"></div>
+
+    
+<div id="popupCard" class="popup-card">
+  <div class="popup-content">
+    <img id="popupImage" src="" alt="sticker">
+    <p id="popupMessage"></p>
+    <button class="btn" onclick="closePopup()">OK</button>
+  </div>
+</div>
+
+</body>
+</html>

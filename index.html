@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PORTO</title>
+
+  
+  <style>
+  
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: verdana, serif;
+      color: white;
+      background: #000000;
+    }
+
+    header {
+      width: 100%;
+      background: #393b3b;
+      border-bottom: solid 3px rgb(34, 121, 235);
+      border-radius: 30px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      padding: 20px 80px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 10; 
+    }
+
+    header .logo {
+      font-weight: bold;
+      font-size: 24px;
+      color: #00ffff; 
+    }
+
+    header nav a {
+      margin-left: 30px;
+      text-decoration: none;
+      color: white;
+      font-size: 16px;
+      transition: 0.3s; 
+    }
+
+    header nav a:hover {
+      color: #00ffff; 
+    }
+
+    
+    .hero {
+      position: relative;
+      width: 100%;
+      height: 100vh; 
+      background: url('https://images.unsplash.com/photo-1550745165-9bc0b252726f?ixlib=rb-4.0.3') no-repeat center center/cover;
+      display: flex;
+      align-items: center;
+      padding: 0 80px;
+      margin-top: 80px;
+    }
+
+    .hero .overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to right, rgba(0,0,0,0.8), rgba(0,0,0,0.4));
+    }
+
+    .hero .content {
+      position: relative;
+      z-index: 1;
+      max-width: 600px;
+    }
+
+    .hero h2 {
+      font-size: 28px;
+      font-weight: normal;
+      margin-bottom: 10px;
+    }
+
+    /* Typing effect */
+.type-container {
+  font-size: 30px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(90deg, #00ffff, #ff00ff, #00ff88);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+.cursor {
+  display: inline-block;
+  width: 3px;
+  height: 1em;
+  background-color: #00ffff;
+  margin-left: 5px;
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+
+    .hero p {
+      margin: 20px 0;
+      line-height: 1.6;
+      font-size: 18px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 15px 35px;
+      background: transparent;
+      border: 2px solid #00ffff;
+      color: #00ffff;
+      text-decoration: none;
+      border-radius: 30px;
+      font-weight: bold;
+      transition: 0.3s;
+      margin-top: 20px;
+    }
+
+    .btn:hover {
+      background: #00ffff;
+      color: black;
+      transform: scale(1.05);
+      
+    }
+
+  
+    .about {
+      padding: 80px;
+      background: #1a1a1a;
+      text-align: center;
+    }
+
+    .about h2 {
+      font-size: 42px;
+      margin-bottom: 30px;
+      color: #00ffff;
+    }
+
+
+    .projects {
+      padding: 80px;
+      background: #111;
+      text-align: center;
+    }
+
+    .projects h2 {
+      font-size: 42px;
+      margin-bottom: 50px;
+      color: #00ffff;
+    }
+
+    .card-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+
+    .card {
+      background: #1a1a1a;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+      transition: transform 0.3s, box-shadow 0.3s;
+      border: 1px solid #333;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 30px rgba(0, 255, 255, 0.3);
+      border-color: #00ffff;
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover; 
+      display: block;
+    }
+
+    .card-content {
+      padding: 25px;
+    }
+
+    .card-content h3 {
+      margin-bottom: 15px;
+      color: #fff;
+      font-size: 22px;
+    }
+
+    .card-content p {
+      font-size: 16px;
+      color: #bbb;
+      line-height: 1.5;
+      margin-bottom: 20px;
+    }
+    .card-content a {
+      color: #00ffff;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .card-content a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      background: #0d0d0d;
+      color: #bbb;
+      padding: 60px 80px 20px;
+    }
+
+    .footer-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 40px;
+    }
+
+    .footer-about h3 {
+      color: #00ffff;
+      margin-bottom: 15px;
+      font-size: 24px;
+    }
+
+    .footer-contact h4,
+    .footer-social h4 {
+      color: #fff;
+      margin-bottom: 20px;
+      font-size: 20px;
+    }
+
+    .footer-contact p {
+      margin-bottom: 10px;
+      font-size: 16px;
+      display: flex;
+      align-items: center;
+    }
+
+    .footer-contact i {
+      margin-right: 10px;
+      color: #00ffff;
+    }
+
+    .footer-social .social-icons {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .footer-social .social-icons a {
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      background: #333;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: 0.3s;
+    }
+
+    .footer-social .social-icons a:hover {
+      background: linear-gradient(90deg, #0059ff, #8400ff);
+      transform: scale(1.1);
+    }
+
+    .footer-social .social-icons img {
+      width: 24px;
+      height: 24px;
+
+    }
+
+    .footer-bottom {
+      border-top: 1px solid #222;
+      text-align: center;
+      padding-top: 20px;
+      margin-top: 30px;
+      font-size: 16px;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+ 
+  <header>
+    <div class="logo">My Portfolio</div>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="home">
+    <div class="overlay"></div>
+    <div class="content">
+      <!-- typewriter -->
+      <div class="type-container">
+      <span class="typed-text"></span>
+      <span class="cursor"></span>
+   </div>
+      <p>I'm a student who loves creating cool projects and learning new things. Welcome to my portfolio where I share my work!</p>
+  </div>
+
+   </button>
+  </section>
+
+    <!-- projek guah -->
+  <section class="projects" id="projects">
+    <h2>My Projects</h2>
+    <div class="card-container">
+
+      <div class="card">
+        <img src="foto project card/Foto Class.jpg" alt="Project 1">
+        <div class="card-content">
+          <h3>Website kelas</h3>
+          <a href="tugas terbaru/web kelas/Website Kelas.html">Lihat Proyek</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="foto project card/baldwin.jpg" alt="Project 2">
+        <div class="card-content">
+          <h3>Biodata</h3>
+          <a href="tugas terbaru/aBiodata/coba aja.html">Lihat Proyek</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="foto project card/mapelthumb.jpg" alt="Project 3">
+        <div class="card-content">
+          <h3>Jadwal Mapel</h3>
+          <a href="tugas terbaru/aJadwal mapel/jadwal mapel.html">Lihat Proyek</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="foto project card/1.jpg" alt="Project 4">
+        <div class="card-content">
+          <h3>Form Login</h3>
+          <a href="tugas terbaru/aRegister/projek login web/register.html">Lihat Proyek</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="foto project card/download (7).jpg" alt="Project 5">
+        <div class="card-content">
+          <h3>Coffee Shop</h3>
+          <a href="NIAGAFIX/perbaikan2.html">Lihat Proyek</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="foto project card/circlelogo.png" alt="Project 6">
+        <div class="card-content">
+          <h3>Circle Calculator</h3>
+          <a href="jibrllingkaran/jibriljs.html">Lihat Proyek</a>
+        </div>
+      </div>
+
+
+    </div>
+  </section>
+
+
+  <footer id="contact">
+    <div class="footer-container">
+      <div class="footer-about">
+        <h3>My Portfolio</h3>
+        <p>Dream it. Do it. Live it.</p>
+      </div>
+
+      <div class="footer-contact">
+        <h4>Contact Me</h4>
+        <p>📱 +62 857 9523 0799</p>
+        <p>🏠 Cirebon, Indonesia</p>
+      </div>
+
+      <div class="footer-social">
+        <h4>Follow Me</h4>
+        <div class="social-icons">
+          <a href="https://open.spotify.com/user/Axe🐾" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/2111/2111624.png" alt="spotipi">
+          </a>
+          
+          <a href="https://instagram.com/jibrillo_o" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
+          </a>
+  
+          <a href="https://wa.me/085795230799" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="wasap">
+          </a>
+          
+          <a href="https://tiktok.com/@chloir" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png" alt="TikTok">
+          </a>
+          
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2070 My Portfolio. AMBRIKIK.</p>
+    </div>
+  </footer>
+
+  <script>
+  const phrases = [ 
+    "Hello, i'm Jibril",
+    "Halo, saya jibril",
+    "Bonjour, je m'appelle Jibril",
+    "Привет, я Джибрил"
+  ];
+
+  const typedText = document.querySelector(".typed-text");
+
+  let phraseIndex = 0;
+  let charIndex = 0;
+  let isDeleting = false;
+
+  function type() {
+    const currentPhrase = phrases[phraseIndex];
+    const currentText = currentPhrase.substring(0, charIndex);
+
+    typedText.textContent = currentText;
+
+    if (!isDeleting && charIndex < currentPhrase.length) {
+      charIndex++;
+      setTimeout(type, 100);
+    } else if (isDeleting && charIndex > 0) {
+      charIndex--;
+      setTimeout(type, 60);
+    } else {
+      isDeleting = !isDeleting;
+      if (!isDeleting) {
+        phraseIndex = (phraseIndex + 1) % phrases.length;
+      }
+      setTimeout(type, 1000);
+    }
+  }
+
+  type();
+</script>
+</body>
+</html>
