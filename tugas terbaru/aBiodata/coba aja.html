@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BIodata</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+background: rgb(49, 41, 41);            
+        }
+
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px 10%;
+            background: transparent;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+        }
+
+        .judul {
+            font-size: 25px;
+            color: rgb(5, 1, 1);
+            text-decoration: none;
+            font-weight: 600;
+            pointer-events: none;
+        }
+
+        .navbar a {
+            font-size: 18px;
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            font-weight: 500;
+            margin-left: 35px;
+        }
+
+        .navbar a.active {
+            background: linear-gradient(45deg, #f06, #3cf, rgb(51, 255, 78));
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .home {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0 10%;
+        }
+
+        .home-content {
+            background: rgba(255, 255, 255, 0.986);
+            padding: 20px;
+            border-radius: 10px;
+            color: rgb(0, 0, 0);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            flex: 1;
+        }
+
+        .home-content table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .home-content table td {
+            padding: 8px 0;
+        }
+
+        .home-content table tr td:first-child {
+            font-weight: bold;
+            padding-right: 15px;
+        }
+
+        .photo-container {
+    position: relative; /* biar pseudo-element bisa absolute */
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    padding: 5px;
+    box-shadow: conic-gradient(
+        red, orange, yellow, lime, cyan, blue, magenta, red
+    );
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 50px;
+    animation: spin 3s linear infinite;
+    z-index: 1;
+    animation: spin infinite;
+}
+
+.photo-container::before {
+    content: "";
+    position: absolute;
+    inset: 0; /* full ukuran parent */
+    border-radius: 50%;
+    background: conic-gradient(
+        red, orange, yellow, lime, cyan, blue, magenta, red
+    );
+    filter: blur(25px);  /* efek bias */
+    animation: spin 3s linear infinite;
+    z-index: -1; /* supaya glow ada di belakang foto */
+}
+
+.photo-container img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border:none;
+    object-fit: cover;
+    
+}
+
+
+
+        .photo-container img {
+            width: 100%;
+            height: 100%;
+            border-radius: 20%;
+            border: 3px solid #0401139f; 
+            object-fit: cover;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            
+        }
+
+        .home-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="judul">Personal biodata</a>
+        <nav class="navbar">
+            <a href="#" class="active">masih pemula</a>🙏🏻
+        </nav>
+    </header>
+
+    <section class="home">
+        <div class="home-wrapper">
+            <div class="home-content">
+                <table>
+                    <tr><td>Nama Lengkap :</td><td>Mohamad Jibril</td></tr>
+                    <tr><td>Tanggal Lahir :</td><td>5 Maret 2010</td></tr>
+                    <tr><td>Jenis Kelamin :</td><td>Laki-laki</td></tr>
+                    <tr><td>Alamat :</td><td>Perumahan Sentani Regency, Sumber</td></tr>
+                    <tr><td>Telepon :</td><td>0857-4532-0799</td></tr>
+                    <tr><td>Hobi :</td><td>Berenang, Bermain Basket, Coding</td></tr>
+                </table>
+            </div>
+            <div class="photo-container">
+                <img src="foto estetik.jpeg" alt="Foto Profil">
+            </div>
+        </div>
+    </section>
+</body>
+</html>

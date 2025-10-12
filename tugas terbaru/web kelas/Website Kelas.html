@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>X PPLG 1 | Software & Game Development</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="Website icon" type="png" href="Foto/x pplg 1.png" />
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="logo-header">
+        <img src="Foto/x pplg 1.png" alt="logo" />
+        <h1>X-PPLG 1</h1>
+      </div>
+      <nav class="nav">
+        <ul class="nav-list">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li class="dropdown">
+            <button class="dropbtn">Lainnya ▼</button>
+            <div class="dropdown-content">
+              <a href="#students">Siswa</a>
+              <a href="#photo">Foto Kelas</a>
+              <a href="#projects">Guru</a> 
+              <a href="#Jadwal">Jadwal Mapel</a>
+              <a href="#developers">Developers</a>
+              
+            </div>
+          </li>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="container hero-content">
+        <h2>X PPLG 1</h2>
+        <p>Software & Game Development | 2025-2026</p>
+        <a href="#students" class="btn btn-primary">Meet the Class</a>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="container">
+        <h2 class="section-title">About X PPLG 1</h2>
+        <div class="about-content">
+          <p>
+            X PPLG 1 adalah kelas penuh semangat dengan 36 siswa yang fokus pada
+            <strong>Perangkat Lunak dan Game</strong>. Kami belajar tentang
+            <strong>desain game, pengembangan web, dan inovasi digital</strong>.
+            Tujuan kami sederhana:
+            <strong>solusi digital bermanfaat dan game yang menginspirasi</strong>.
+          </p>
+          <div class="teacher-card">
+            <h3>Class Teacher</h3>
+            <p class="teacher-name">Vihantika Rachma Fitri, S.Pd.</p>
+            <p class="teacher-message">
+              "Teruslah belajar, tetaplah ingin tahu, dan jangan pernah berhenti berkarya.
+              Masa depan adalah milik mereka yang membuatnya.."
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="visi-misi">
+      <div class="visi-container">
+        <h3>Visi</h3>
+        <p>
+          Menjadi lembaga pendidikan yang unggul dalam membentuk generasi cerdas,
+          berkarakter, dan berdaya saing global.
+        </p>
+      </div>
+      <div class="misi-container">
+        <h3>Misi</h3>
+        <ul>
+          <li>Menciptakan lingkungan belajar yang kondusif dan inovatif.</li>
+          <li>Mengembangkan potensi akademik dan non-akademik siswa.</li>
+          <li>Menanamkan nilai moral, etika, dan kepedulian sosial.</li>
+          <li>Mempersiapkan siswa agar mampu menghadapi tantangan global.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="students" class="section bg-dark">
+      <div class="container">
+        <h2 class="section-title">Our Students</h2>
+        <div class="search-box">
+          <input type="text" id="studentSearch" placeholder="Search by name..." />
+        </div>
+        <div class="students-grid" id="studentsGrid"></div>
+      </div>
+    </section>
+
+    <section id="photo" class="section">
+      <div class="container">
+        <h2 class="section-title">Class Photo</h2>
+        <div class="photo-container">
+          <img src="Foto/Foto Class.jpg" alt="Class Photo" class="class-photo" />
+          <p class="photo-caption">
+            Our proud moment as X PPLG 1 — the future of software and game development.
+            Taken during our first collaborative hackathon in 2025.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section bg-dark">
+      <div class="container">
+        <h2 class="section-title">Guru</h2>
+        <p class="section-desc">Guru-guru hebat yang membimbing kami setiap hari.</p>
+        <div class="projects-grid">
+          <div class="project-card">
+            <img src="Foto/bu eri.jpg" alt="Bu Eri" />
+            <h4>Bu Eri</h4>
+            <p>Guru Bahasa Inggris</p>
+          </div>
+          <div class="project-card">
+            <img src="Foto/bu vihantika.jpg" alt="Bu Vihantika" />
+            <h4>Ibu Vihantika</h4>
+            <p>Guru PPKN & Sejarah</p>
+          </div>
+          <div class="project-card">
+            <img src="Foto/pak doni.jpg" alt="Pak Doni" />
+            <h4>Pak Doni</h4>
+            <p>Guru Bhs.Indonesia</p>
+          </div>
+          <div class="project-card">
+            <img src="Foto/pa sri.jpg" alt="Pak Sri" />
+            <h4>Pak Sri</h4>
+            <p>Guru BK</p>
+          </div>
+          <div class="project-card">
+            <img src="Foto/Pak Heri 2.jpg" alt="Pak Heri" />
+            <h4>Pak Heri</h4>
+            <p>Guru Jurusan</p>
+          </div>
+          <div class="project-card">
+            <img src="Foto/bu eli.jpg" alt="Bu Eli" />
+            <h4>Bu Eli</h4>
+            <p>Guru Agama</p>
+          </div>
+          <div class="project-card">
+            <img src="Foto/Pak Ucup.jpg" alt="Pak Ucup" />
+            <h4>Pak Yusup</h4>
+            <p>Guru PJOK</p>
+          </div>
+          <div class="project-card">
+            <img src="Foto/Pak Meizi.jpg" alt="Pak Meizi" />
+            <h4>Pak Meizi</h4>
+            <p>Guru Matematika</p>
+          </div>
+          <div class="project-card">
+            <img src="Foto/Bu Weti.jpg" alt="Bu Weti" />
+            <h4>Bu Weti</h4>
+            <p>Guru Ipas</p>
+          </div>
+          <div class="project-card">
+            <img src="Foto/Pak Riyan.jpg" alt="Pak Riyan" />
+            <h4>Pak Riyan</h4>
+            <p>Guru Bhs.Sunda</p>
+          </div>
+          <div class="project-card">
+            <img src="Foto/Pak Rizal.jpg" alt="Pak Rizal" />
+            <h4>Pak Rizal</h4>
+            <p>Guru Informatika</p>
+          </div>
+          <div class="project-card">
+            <img src="Foto/Anom.jpg" alt="Bu Tresna" />
+            <h4>Bu Tresna</h4>
+            <p>Guru Seni Budaya</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="Jadwal">
+      <div class="container">
+        <h2 class="section-title">Jadwal Pelajaran</h2>
+        <div class="grid-container">
+          <div class="day">
+            <h2>SENIN</h2>
+            <div class="time-range">06.30 - 14.45</div>
+            <div class="session"><span>Upacara</span><span>06.30 - 07.15</span></div>
+            <div class="session"><span>PJOK</span><span>07.15 - 08.45</span></div>
+            <div class="session"><span>I S T I R A H A T</span><span>08.45 - 09.15</span></div>
+            <div class="session"><span>PJOK</span><span>09.15 - 10.00</span></div>
+            <div class="session"><span>BK</span><span> 10.00 - 10.45</span></div>
+            <div class="session"><span>DPK</span><span>10.45 - 11.30</span></div>
+            <div class="session"><span>I S T I R A H A T</span><span>11.30 - 12.30</span></div>
+            <div class="session"><span>DPK</span><span>12.30 - 14.45</span></div>
+          </div>
+          <div class="day">
+            <h2>SELASA</h2>
+            <div class="time-range">06.30 - 15.15</div>
+            <div class="session"><span>Informatika</span><span>06.30 - 08.45</span></div>
+            <div class="session"><span>I S T I R A H A T</span><span>08.45 - 09.15</span></div>
+            <div class="session"><span>Informatika</span><span>09.15 - 10.00</span></div>
+            <div class="session"><span>Ipas</span><span>10.00 - 11.30</span></div>
+            <div class="session"><span>I S T I R A H A T</span><span>11.30 - 12.30</span></div>
+            <div class="session"><span>Ipas</span><span>12.30 - 15.15</span></div>
+            <div class="session"><span> &nbsp</span><span>&nbsp</span></div>
+            <div class="session"><span> &nbsp</span><span>&nbsp</span></div>
+          </div>
+          <div class="day">
+            <h2>RABU</h2>
+            <div class="time-range">06.30 - 15.15</div>
+            <div class="session"><span>Matematika</span><span>06.30 - 08.45</span></div>
+            <div class="session"><span>I S T I R A H A T</span><span>08.45 - 09.15</span></div>
+            <div class="session"><span>Matematika</span><span>09.15 - 10.00</span></div>
+            <div class="session"><span>DPK</span><span>10.00 - 11.30</span></div>
+            <div class="session"><span>I S T I R A H A T</span><span>11.30 - 12.30</span></div>
+            <div class="session"><span>DPK</span><span>12.30 - 14.00</span></div>
+            <div class="session"><span>Bhs.Sunda</span><span>14.00 - 15.15</span></div>
+            <div class="session"><span> &nbsp</span><span>&nbsp</span></div>
+          </div>
+          <div class="day">
+            <h2>KAMIS</h2>
+            <div class="time-range">06.30 - 15.45</div>
+            <div class="session"><span>Pai</span><span>06.00 - 08.45</span></div>
+            <div class="session"><span>I S T I R A H A T</span><span>08.45 - 09.15</span></div>
+            <div class="session"><span>PPKN</span><span>09.15 - 10.45</span></div>
+            <div class="session"><span>Sejarah</span><span>10.45 - 11.30</span></div>
+            <div class="session"><span>I S T I R A H A T</span><span>11.30 - 12.30</span></div>
+            <div class="session"><span>Sejarah</span><span>12.30 - 14.00</span></div>
+            <div class="session"><span>Bhs.Indo</span><span>14.00 - 15.45</span></div>
+            <div class="session"><span> &nbsp</span><span>&nbsp</span></div>
+          </div>
+        </div>
+        <div class="grid-container second">
+          <div class="day">
+            <h2>JUM'AT</h2>
+            <div class="time-range">06.30 - 15.45</div>
+            <div class="session"><span>Kegiatan Pembiasaan</span><span>06.30 - 07.15</span></div>
+            <div class="session"><span>Bhs.Inggris</span><span>07.15 - 08.45</span></div>
+            <div class="session"><span>I S T I R A H A T</span><span>08.45 - 09.15</span></div>
+            <div class="session"><span>Bhs.Inggris</span><span>09.15 - 10.45</span></div>
+            <div class="session"><span>Seni Budaya</span><span>10.45 - 11.30</span></div>
+            <div class="session"><span>I S T I R A H A T</span><span>11.30 - 12.30</span></div>
+            <div class="session"><span>Seni Budaya</span><span>12.30 - 13.15</span></div>
+            <div class="session"><span>DPK</span><span>13.45 - 15.45</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<section id="developers" class="section">
+  <div class="container">
+    <h2 class="section-title">Developers</h2>
+     <p class="section-desc">Developers Yang Mengerjakan Web Ini.</p>
+    <div class="developers-grid">
+
+<div class="profile-card">
+  <img src="Foto/pp.jpg" alt="Dev 1" />
+  <div class="profile-info">
+    <p class="UserName">Kevin Anas Chrisnandi</p>
+    <div class="social-media">
+    <a href="https://www.instagram.com/your_vinz?igsh=bWZ4bjcwODZyanp5" target="_blank">
+      <i class="fab fa-instagram"></i>
+    </a>
+  </div>
+    <div class="Description">Front-End Developer</div>
+  </div>
+</div>
+
+
+      <div class="profile-card">
+  <img src="Foto/jibril.jpg" alt="Dev 1" />
+  <div class="profile-info">
+    <p class="UserName">Mohammad Jibril</p>
+    <div class="social-media">
+    <a href="https://www.instagram.com/jibrillo_o?utm_source=qr&igsh=dWozanRnbTFsdDR1" target="_blank">
+      <i class="fab fa-instagram"></i>
+    </a>
+  </div>
+    <div class="Description">Front-End Developer </div>
+  </div>
+</div>
+
+      <div class="profile-card">
+  <img src="Foto/arioo.jpg" alt="Dev 1" />
+  <div class="profile-info">
+    <p class="UserName">Muhamad Ario Aditra</p>
+      <div class="social-media">
+    <a href="https://www.instagram.com/marioioiii?utm_source=qr&igsh=MTFhZWxsYmdkdWkzcQ==" target="_blank">
+      <i class="fab fa-instagram"></i>
+    </a>
+  </div>
+    <div class="Description">Design</div>
+  </div>
+</div>
+
+
+     <div class="profile-card">
+  <img src="Foto/geisha.jpg" alt="Dev 1" />
+  <div class="profile-info">
+    <p class="UserName">Geisa Devi</p>
+     <div class="social-media">
+    <a href="https://www.instagram.com/kyzenn_g?igsh=MW1wcmF3b3d3MWN5" target="_blank">
+      <i class="fab fa-instagram"></i>
+    </a>
+  </div>
+    <div class="Description">PPT Maker</div>
+  </div>
+</div>
+
+
+     <div class="profile-card">
+  <img src="Foto/rakha.jpg" alt="Dev 1" />
+  <div class="profile-info">
+    <p class="UserName">Rakha Pamungkas Ahyani</p>
+      <div class="social-media">
+    <a href="https://www.instagram.com/rakha_160810?igsh=Z2dncTh2bjE1endv" target="_blank">
+      <i class="fab fa-instagram"></i>
+    </a>
+  </div>
+    <div class="Description">Design</div>
+  </div>
+</div>
+
+     <div class="profile-card">
+  <img src="Foto/lovi.jpg" alt="Dev 1" />
+  <div class="profile-info">
+    <p class="UserName">Ervina Lovi</p>
+      <div class="social-media">
+    <a href="https://www.instagram.com/lovi_lvy?igsh=MTZoNG16bjFsb3Nx" target="_blank">
+      <i class="fab fa-instagram"></i>
+    </a>
+  </div>
+    <div class="Description">PPT Maker</div>
+  </div>
+</div>
+
+
+    </div>
+  </div>
+</section>
+
+
+
+  <footer class="footer">
+    <div class="container">
+      <p class="motto">"Code Today, Create Tomorrow"</p>
+      <div class="Contact">
+        <a href="tel:+6281386797988" class="nav-link">
+          <i class="fa-brands fa-whatsapp"></i> +62 813-8679-7988
+        </a>
+        <a href="https://www.instagram.com/xpplg1.class/" class="nav-link">
+          <i class="fab fa-instagram"></i> www.instagram.com/xpplg1.class/
+        </a>
+        <a href="https://www.smkn1-cirebon.sch.id/" class="nav-link">
+          <i class="fa-brands fa-google"></i> www.smkn1-cirebon.sch.id/
+        </a>
+      </div>
+      <p class="copyright">
+        © 2025 X PPLG 1 — Software & Game Development
+      </p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
