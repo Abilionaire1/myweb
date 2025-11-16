@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Library - Premium E-Books & Courses</title>
+
+    <!-- SEO -->
+    <meta name="description"
+        content="Digital Library menyediakan e-book dan e-course premium untuk meningkatkan keterampilan dan pengetahuan Anda.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1>GrowBillion.co</h1>
+            </div>
+
+            <nav class="nav" aria-label="Navigasi utama">
+                <ul>
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#products" class="nav-link">Produk</a></li>
+                    <li><a href="#bundles" class="nav-link">Bundle</a></li>
+                    <li><a href="#about" class="nav-link">Tentang</a></li>
+                </ul>
+
+                <button class="hamburger" aria-label="Menu" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <video class="hero-video" autoplay loop muted playsinline>
+                <source src="hero.mp4" type="video/mp4">
+            </video>
+            <div class="container">
+                <h2 class="hero-title">Digital Library & Premium E-Courses</h2>
+                <p class="hero-subtitle">Temukan e-book dan course terbaik untuk upgrade skill-mu</p>
+                <a href="#products" class="cta-button">Lihat Produk</a>
+            </div>
+        </section>
+
+        <!-- Categories Section -->
+        <section class="categories">
+            <div class="container">
+                <div class="category-chips" role="group" aria-label="Filter kategori">
+                    <button class="filter-btn active" data-filter="all">ALL</button>
+                    <button class="filter-btn" data-filter="self-improvement">Pengembangan Diri</button>
+                    <button class="filter-btn" data-filter="literasi-keuangan">Literasi Keuangan</button>
+                    <button class="filter-btn" data-filter="novel">Novel</button>
+                    <button class="filter-btn" data-filter="bisnis-dan-marketing">Bisnis & Marketing</button>
+                    <button class="filter-btn" data-filter="edukasi-digital">Edukasi</button>
+                    <button class="filter-btn" data-filter="bundle">Bundle</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="products" class="products">
+            <div class="container">
+                <h2 class="section-title">E-Books</h2>
+                <div class="product-grid">
+
+                    <!-- Product Card -->
+                    <div class="product-card" data-category="self-improvement">
+                        <div class="product-image">
+                            <img src="https://i.pinimg.com/736x/placeholder.jpg" loading="lazy" alt="Atomic Habits">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Atomic Habits</h3>
+                            <p class="product-price">Rp 18.000</p>
+                            <a href="#" class="view-details-btn" data-id="ebook-001">View
+                                Details</a>
+                        </div>
+                    </div>
+
+                    <!-- Product Card -->
+                    <div class="product-card" data-category="self-improvement">
+                        <div class="product-image">
+                            <img src="https://i.pinimg.com/1200x/0a/45/f3/0a45f321c542e970ea41d185ba34674c.jpg" loading="lazy" alt="Rich Dad Poor Dad">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Is It Bad or Good Habits</h3>
+                            <p class="product-price">Rp 22.000</p>
+                            <a href="#" class="view-details-btn" data-id="ebook-002">View
+                                Details</a>
+                        </div>
+                    </div>
+
+                    <!-- Product Card -->
+                    <div class="product-card" data-category="novel">
+                        <div class="product-image">
+                            <img src="https://i.pinimg.com/736x/placeholder.jpg" loading="lazy" alt="Bumi Pisang">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Bumi Pisang</h3>
+                            <p class="product-price">Rp 18.000</p>
+                            <a href="#" class="view-details-btn" data-id="ebook-003">View Details</a>
+                        </div>
+                    </div>
+
+                    <!-- Product Card -->
+                    <div class="product-card" data-category="literasi-keuangan">
+                        <div class="product-image">
+                            <img src="https://i.pinimg.com/736x/placeholder.jpg" loading="lazy"
+                                alt="The Psychology of Money">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">The Psychology of Money</h3>
+                            <p class="product-price">Rp 20.000</p>
+                            <a href="product-the-psychology-of-money.html" class="view-details-btn"
+                                data-id="ebook-004">View Details</a>
+                        </div>
+                    </div>
+
+                    <!-- Product Card -->
+                    <div class="product-card" data-category="self-improvement">
+                        <div class="product-image">
+                            <img src="https://i.pinimg.com/736x/placeholder.jpg" loading="lazy" alt="Dark Psychology">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Dark Psychology</h3>
+                            <p class="product-price">Rp 15.000</p>
+                            <a href="product-dark-psychology.html" class="view-details-btn" data-id="ebook-005">View
+                                Details</a>
+                        </div>
+                    </div>
+
+                    <!-- Product Card -->
+                    <div class="product-card" data-category="bisnis-dan-marketing">
+                        <div class="product-image">
+                            <img src="https://i.pinimg.com/736x/placeholder.jpg" loading="lazy"
+                                alt="30 Hari Jago Jualan">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">30 Hari Jago Jualan</h3>
+                            <p class="product-price">Rp 17.000</p>
+                            <a href="product-30-hari-jago-jualan.html" class="view-details-btn" data-id="ebook-006">View
+                                Details</a>
+                        </div>
+                    </div>
+
+                    <!-- Product Card -->
+                    <div class="product-card" data-category="self-improvement">
+                        <div class="product-image">
+                            <img src="https://i.pinimg.com/736x/placeholder.jpg" loading="lazy" alt="Seni Berbicara">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Seni Berbicara</h3>
+                            <p class="product-price">Rp 14.000</p>
+                            <a href="product-seni-berbicara.html" class="view-details-btn" data-id="ebook-007">View
+                                Details</a>
+                        </div>
+                    </div>
+
+                    <!-- Product Card -->
+                    <div class="product-card" data-category="self-improvement">
+                        <div class="product-image">
+                            <img src="https://i.pinimg.com/736x/placeholder.jpg" loading="lazy"
+                                alt="The Principle of Power">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">The Principle of Power</h3>
+                            <p class="product-price">Rp 16.000</p>
+                            <a href="product-the-principle-of-power.html" class="view-details-btn"
+                                data-id="ebook-008">View Details</a>
+                        </div>
+                    </div>
+
+                    <!-- Product Card -->
+                    <div class="product-card" data-category="self-improvement">
+                        <div class="product-image">
+                            <img src="https://i.pinimg.com/736x/placeholder.jpg" loading="lazy"
+                                alt="Cara Berpikir ala Sherlock Holmes">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Cara Berpikir ala Sherlock Holmes</h3>
+                            <p class="product-price">Rp 18.000</p>
+                            <a href="product-cara-berpikir-ala-sherlock-holmes.html" class="view-details-btn"
+                                data-id="ebook-009">View Details</a>
+                        </div>
+                    </div>
+
+                    <!-- Product Card -->
+                    <div class="product-card" data-category="edukasi-digital">
+                        <div class="product-image">
+                            <img src="https://i.pinimg.com/736x/placeholder.jpg" loading="lazy" alt="Basic UI/UX Figma">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Basic UI/UX Figma</h3>
+                            <p class="product-price">Rp 19.000</p>
+                            <a href="product-basic-ui-ux-figma.html" class="view-details-btn" data-id="ebook-010">View
+                                Details</a>
+                        </div>
+                    </div>
+
+                    <!-- Product Card -->
+                    <div class="product-card" data-category="literasi-keuangan">
+                        <div class="product-image">
+                            <img src="https://i.pinimg.com/736x/placeholder.jpg" loading="lazy"
+                                alt="The Intelligent Investor">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">The Intelligent Investor</h3>
+                            <p class="product-price">Rp 25.000</p>
+                            <a href="product-the-intelligent-investor.html" class="view-details-btn"
+                                data-id="ebook-011">View Details</a>
+                        </div>
+                    </div>
+
+                    <!-- Product Card -->
+                    <div class="product-card" data-category="self-improvement">
+                        <div class="product-image">
+                            <img src="https://i.pinimg.com/736x/placeholder.jpg" loading="lazy"
+                                alt="Metode Jitu Meningkatkan Daya Ingat">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Metode Jitu Meningkatkan Daya Ingat</h3>
+                            <p class="product-price">Rp 12.000</p>
+                            <a href="product-metode-jitu-meningkatkan-daya-ingat.html" class="view-details-btn"
+                                data-id="ebook-012">View Details</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Bundles Section -->
+        <section id="bundles" class="bundles">
+            <div class="container">
+                <h2 class="section-title">Bundle Hemat</h2>
+
+                <!-- GRID ASLI BUNDLE -->
+                <div class="product-grid" id="bundleGrid">
+
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- About Section -->
+        <section id="about" class="about">
+            <div class="container">
+                <h2 class="section-title">Tentang Kami</h2>
+                <div class="about-content">
+                    <div style="text-align: left;">
+                        <p>Kami adalah teman belajar yang udah pilihkan untuk kamu
+                            E-book dan E-course terbaik dengan kualitas premium. Semua materi udah melalui seleksi
+                            biar kamu bisa fokus belajar tanpa pusing milih-milih.</p>
+
+                        <p>Yang bikin GrowBillion beda:
+                        <p>
+                            ✨ Kami pilihkan yang terbaik buat kamu, jadi nggak perlu khawatir dapat konten asal-asalan
+                        </p>
+
+                        <p> Kami kasih akses ke:
+                        <p>📚 E-book & E-course pilihan </p>
+                        <p>💡 Materi berkualitas tinggi </p>
+                        <p>💰 Harga ramah kantong </p>
+                        <p> ⚡ Bisa langsung praktek </p>
+                        Semua materinya pilihan dan terjamin, jadi kamu tinggal fokus belajar aja!
+
+                        Yuk, mulai journey belajar seru bersama GrowBillion! ✨"</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+  <div class="footer-inner">
+
+    <div class="footer-brand">
+      <h2 class="brand-name">GrowBillion</h2>
+      <p class="brand-tagline">Digital products • E-books • Bundles</p>
+    </div>
+
+    <div class="footer-links">
+      <a href="#">Home</a>
+      <a href="#">Products</a>
+      <a href="#">Bundles</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </div>
+
+    <div class="footer-social">
+      <a href="#" class="soc-icon">🐦</a>
+      <a href="#" class="soc-icon">📸</a>
+      <a href="#" class="soc-icon">🎧</a>
+      <a href="#" class="soc-icon">💼</a>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 YourBrand. All rights reserved.</p>
+  </div>
+</footer>
+
+
+    <!-- PRODUCT DETAILS FLOATING MODAL -->
+    <div id="detailsOverlay" class="details-overlay hidden" aria-hidden="true" role="dialog" aria-modal="true"
+        aria-labelledby="detailsTitle">
+        <div class="details-card" role="document">
+
+            <button class="close-btn" id="detailsClose" aria-label="Tutup Detail">✕</button>
+
+            <div class="details-body">
+                <div class="image-gallery">
+
+                    <div class="main-image-wrap">
+                        <img id="mainImage" src="" alt="Gambar produk utama" class="main-img">
+                    </div>
+
+                    <div class="thumb-scroll" id="thumbContainer" tabindex="0" aria-label="Thumbnail produk">
+                        <!-- thumbs injected by JS -->
+                    </div>
+                </div>
+
+                <div class="details-info">
+                    <h2 id="productTitle"></h2>
+                    <p class="price" id="productPrice"></p>
+                    <p class="description" id="productDescription"></p>
+
+                    <div class="details-actions">
+                        <a id="buyBtn" class="buy-btn" target="_blank" rel="noopener noreferrer">Beli via WhatsApp</a>
+                        <button class="share-btn" id="shareBtn" type="button">Share</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
