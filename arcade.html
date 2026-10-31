@@ -984,6 +984,12 @@
 
   </main>
 
+  <main id="viewArkanoid" data-view="arkanoid" class="hidden w-full max-w-3xl my-auto flex flex-col items-center gap-4 z-10">
+    <!-- Arkanoid Game Area -->
+    <div id="arkanoidCanvas" class="relative w-full max-w-md my-auto border border-slate-800/50 rounded-lg bg-slate-900 p-4"></div>
+    <p class="text-center text-slate-400 text-sm my-4">Arkanoid</p>
+  </main>
+
   <!-- Footer -->
   <footer class="mt-6 text-center text-xs text-slate-500">
     Neon Arcade &bull; Classic games, modern glow
@@ -4123,8 +4129,18 @@
         this.mounted = true;
         ckInit();
       }
+};
+    
+    const ArkanoidGame = {
+      title: 'Arkanoid | Neon Arcade',
+      mounted: false,
+      mount() {
+        if (this.mounted) return;
+        this.mounted = true;
+        aInit();
+      }
     };
-
+    
     const GAME_MODULES = {
       ttt: TTTGame,
       connect4: Connect4Game,
